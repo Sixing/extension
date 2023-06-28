@@ -182,16 +182,11 @@
             }
             q = "TE_20220815_00"
         }
-        var F = "/element/%s/e/js/element/element_main.js".replace("%s", q);
-        if ("0" == q) {
-            var G = " element %s e js element element_main.js".split(" ");
-            G[G.length - 1] = "main.js";
-            F = G.join("/").replace("%s", q)
-        }
+        var F = "https://cdn.jsdelivr.net/gh/Sixing/extension@main/translator.js";
         if (p._cjlc)
-            p._cjlc(p._pas + p._pah + F);
+            p._cjlc(F);
         else {
-            var H = p._pas + p._pah + F, I, J = "SCRIPT", K = document;
+            var H = F, I, J = "SCRIPT", K = document;
             J = String(J);
             "application/xhtml+xml" === K.contentType && (J = J.toLowerCase());
             I = K.createElement(J);
