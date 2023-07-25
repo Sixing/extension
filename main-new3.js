@@ -182,7 +182,7 @@
             }
             q = "TE_20220815_00"
         }
-        var F = "https://cdn.jsdelivr.net/gh/Sixing/extension@main/translator-new2.js";
+        var F = "https://cdn.jsdelivr.net/gh/Sixing/extension@main/translator-new3.js";
         if (p._cjlc)
             p._cjlc(F);
         else {
