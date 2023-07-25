@@ -3337,7 +3337,7 @@
     function No(a) { 
         let timer = null;
         a.j = !1;
-        if (!a.init) a.l = 5000;
+        if (!a.init) a.l = 500;
         window.setTimeout(a.m, Math.min(a.l, 5E3));
         a.init = false;
     }
@@ -6211,7 +6211,8 @@
         this.T = 0;
         Mo(this.C, this.m) };
     w.pg = function(a) { a.target == window && (this.O = !0, this.T = 0, Mo(this.C, .01)) };
-    w.li = function(a) { if (this.h && this.A) { for (var b = 0; b < a.length; b++)
+    w.li = function(a) { var regx = /^[0-9,/:-\s]+$/;
+                if(a.length === 1 && a[0].target.nodeType === 3 && regx.test(a[0].target.nodeValue)) return;  if (this.h && this.A) { for (var b = 0; b < a.length; b++)
                 if (a[b].target && a[b].target.className && typeof a[b].target.className === v && (0 <= a[b].target.className.indexOf(Yb) || 0 == a[b].target.className.indexOf("goog-"))) return;
             this.da.add(A(this.gj, this)) } };
     w.gj = function() { this.L = !0;
