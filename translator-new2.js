@@ -3336,11 +3336,7 @@
     function No(a) { 
         let timer = null;
         a.j = !1;
-        a.l = 5000;
-        return function() {
-            if (timer) return;
-            timer = window.setTimeout(a.m, Math.min(a.l, 5E3)) 
-        }
+        window.requestAnimationFrame(a.m);
     }
     Lo.prototype.o = function() { var a = (new Date).getTime();
         do { this.g.length && (this.g[0] && this.g[0]() || this.g.shift()); var b = !!this.g.length; var c = 95 * this.h + 5; var d = (new Date).getTime() - a } while (b && d < c);
