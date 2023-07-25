@@ -3327,6 +3327,7 @@
         this.h = .5;
         Mo(this, a);
         this.l = 0;
+        this.init = true;            
         this.j = !0;
         this.m = A(this.o, this) } x(Lo, Jo);
 
@@ -3336,7 +3337,9 @@
     function No(a) { 
         let timer = null;
         a.j = !1;
-        window.requestAnimationFrame(a.m);
+        if (!a.init) a.l = 5000;
+        window.setTimeout(a.m, Math.min(a.l, 5E3));
+        a.init = false;
     }
     Lo.prototype.o = function() { var a = (new Date).getTime();
         do { this.g.length && (this.g[0] && this.g[0]() || this.g.shift()); var b = !!this.g.length; var c = 95 * this.h + 5; var d = (new Date).getTime() - a } while (b && d < c);
