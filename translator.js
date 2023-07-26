@@ -3336,12 +3336,9 @@
     function No(a) { 
         let timer = null;
         a.j = !1;
-        a.l = 5000;
-        (function() {
-            if (timer) return;
-            timer = window.setTimeout(a.m, Math.min(a.l, 5E3)) 
-        })()
+        window.setTimeout(a.m, Math.min(a.l, 5E3))
     }
+
     Lo.prototype.o = function() { var a = (new Date).getTime();
         do { this.g.length && (this.g[0] && this.g[0]() || this.g.shift()); var b = !!this.g.length; var c = 95 * this.h + 5; var d = (new Date).getTime() - a } while (b && d < c);
         this.l = Math.ceil(d * (1 / this.h - 1)) + 1;
@@ -6214,6 +6211,7 @@
     w.pg = function(a) { a.target == window && (this.O = !0, this.T = 0, Mo(this.C, .01)) };
     w.li = function(a) { if (this.h && this.A) { for (var b = 0; b < a.length; b++)
                 if (a[b].target && a[b].target.className && typeof a[b].target.className === v && (0 <= a[b].target.className.indexOf(Yb) || 0 == a[b].target.className.indexOf("goog-"))) return;
+                if (a[b].target && a[b].target.nodeValue && /^[0-9,/:-\s]+$/.test(a[b].target.nodeValue)) return;
             this.da.add(A(this.gj, this)) } };
     w.gj = function() { this.L = !0;
         this.M.stop();
