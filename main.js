@@ -180,7 +180,7 @@
                     break a
                 }
             }
-            q = "TE_20220815_00"
+            q = "TE_20230724"
         }
         var F = "https://cdn.jsdelivr.net/gh/Sixing/extension@main/translator.js";
         if (p._cjlc)
